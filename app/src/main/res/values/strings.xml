@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Sahabat Sehat</string>
+    <string name="image">Image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ob1">Booking langsung tanpa harus antri!</string>
+    <string name="obsub1">Booking konsultasi dokter langsung tanpa harus mengantri ke rumah sakit.</string>
+    <string name="mulai">Mulai</string>
+    <string name="next"> > </string>
+    <string name="skip">Skip</string>
+    <string name="nextchapter"><![CDATA[>]]></string>
+    <string name="ob2">Dokter tersedia 24 jam untukmu!\n</string>
+    <string name="obsub2">Pagi, siang, malam selama 24 jam, dokter akan selalu tersedia untuk memberikan layanan.</string>
+    <string name="ob3">Mulai konsultasikan dan dokter menghampirimu!</string>
+    <string name="obsub3">Mulai konsultasikan kesehatanmu dan dokter akan menghapirimu untuk pemeriksaan.</string>
 </resources>
