@@ -5,5 +5,17 @@
     <string name="title_history">History</string>
     <string name="title_chat">Chat</string>
     <string name="title_profile">Profile</string>
+    <string name="layanan_keseheatan">Layanan Keseheatan</string>
+    <string name="swap_test_pcr"><![CDATA[Swap test & PCR]]></string>
+    <string name="injeksi_vitamin">Injeksi Vitamin</string>
+    <string name="kunjungan_dokter">Kunjungan Dokter</string>
+    <string name="infus_dirumah">Infus Dirumah</string>
+    <string name="perawatan_lansia">Perawatan Lansia</string>
+    <string name="tes_laboratorium">Tes Laboratorium</string>
+    <string name="pemasangan_kateter">Pemasangan Kateter</string>
+    <string name="fisioterapi_akupuntur"><![CDATA[Fisioterapi & Akupuntur]]></string>
+    <string name="semua">Semua</string>
+    <string name="promo">Promo</string>
+    <string name="kerjasama">Kerjasama</string>
 
 </resources>
