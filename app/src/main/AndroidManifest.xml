@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SahabatSehat"
         tools:targetApi="31">
         <activity
+            android:name=".ui.register.RegisterActivity" >
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

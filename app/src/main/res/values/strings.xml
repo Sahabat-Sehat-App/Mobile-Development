@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Sahabat Sehat</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirmation_password">Confirmation Password</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="term_condition"><![CDATA[By signing up, you\'re agree to our Terms & Conditions and Privacy Policy]]></string>
 </resources>
