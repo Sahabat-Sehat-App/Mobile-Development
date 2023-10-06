@@ -12,8 +12,8 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.capstone.sahabatsehat.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_history"
+        android:name="com.capstone.sahabatsehat.ui.history.HistoryF"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
