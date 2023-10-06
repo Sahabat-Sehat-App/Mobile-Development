@@ -13,4 +13,12 @@
     <string name="obsub2">Pagi, siang, malam selama 24 jam, dokter akan selalu tersedia untuk memberikan layanan.</string>
     <string name="ob3">Mulai konsultasikan dan dokter menghampirimu!</string>
     <string name="obsub3">Mulai konsultasikan kesehatanmu dan dokter akan menghapirimu untuk pemeriksaan.</string>
+    <string name="tx_login">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="error">Error</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="or_login">Or Login, with...</string>
+    <string name="dontaccount">Don\'t have an account?</string>
+    <string name="signup">Sign Up</string>
 </resources>
