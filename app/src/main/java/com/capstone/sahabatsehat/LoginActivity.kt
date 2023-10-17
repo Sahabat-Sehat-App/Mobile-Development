@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import com.capstone.sahabatsehat.databinding.ActivityLoginBinding
-import com.google.android.material.textfield.TextInputLayout
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -51,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
                         finishAffinity()
                     }
                     alertDialog.setNegativeButton("No") { _, _ ->
-                        backPressedOnce = false // Setel kembali ke false untuk penanganan selanjutnya
+                        backPressedOnce = false
                     }
                     alertDialog.show()
                 } else {

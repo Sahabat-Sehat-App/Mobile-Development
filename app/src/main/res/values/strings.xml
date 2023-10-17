@@ -18,11 +18,15 @@
     <string name="password">Password</string>
     <string name="error">Error</string>
     <string name="forgot">Forgot Password?</string>
-    <string name="or_login">Or Login, with...</string>
+    <string name="or_login">Or Login, with…</string>
     <string name="dontaccount">Don\'t have an account?</string>
     <string name="signup">Sign Up</string>
-    <string name="lupa_password">Lupa Password</string>
+    <string name="text_forgot">Lupa Password</string>
     <string name="subtext">Kami akan mengirimkan email kepada anda untuk mengatur ulang kata sandi anda</string>
-    <string name="kirim">Kirim</string>
-    <string name="kembali">Kembali ke Masuk</string>
+    <string name="send">Kirim</string>
+    <string name="back_login">Kembali ke Masuk</string>
+    <string name="reset">Atur Ulang Sandi</string>
+    <string name="text_create">Buat kata sandi baru untuk akun anda di bawah ini</string>
+    <string name="confirmation_password">Konfirmasi Password</string>
+    <string name="change_password">Ganti Kata Sandi</string>
 </resources>
