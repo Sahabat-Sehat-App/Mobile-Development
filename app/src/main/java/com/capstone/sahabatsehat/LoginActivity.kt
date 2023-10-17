@@ -1,5 +1,6 @@
 package com.capstone.sahabatsehat
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
@@ -17,6 +18,10 @@ class LoginActivity : AppCompatActivity() {
         onBack()
         setError()
 
+        binding.forgot.setOnClickListener {
+            val intent= Intent(this,ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setError() {
