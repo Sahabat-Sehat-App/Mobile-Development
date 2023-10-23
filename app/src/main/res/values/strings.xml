@@ -29,4 +29,15 @@
     <string name="text_create">Buat kata sandi baru untuk akun anda di bawah ini</string>
     <string name="confirmation_password">Konfirmasi Password</string>
     <string name="change_password">Ganti Kata Sandi</string>
+    <string name="setting_account">  Pengaturan Akun</string>
+    <string name="tx_profile">Profil Saya</string>
+    <string name="tx_family">Daftar Keluarga</string>
+    <string name="tx_address">Daftar Alamat</string>
+    <string name="tx_favorite">Dokter Favorite</string>
+    <string name="application">  Aplikasi Sahabat Sehat</string>
+    <string name="tx_about">Tentang Kami</string>
+    <string name="tx_privacy">Kebijakan Privasi</string>
+    <string name="tx_term_and_codition"><![CDATA[Syarat & Ketentuan]]></string>
+    <string name="tx_contact">Hubungi Kami</string>
+    <string name="tx_logout">Keluar</string>
 </resources>
