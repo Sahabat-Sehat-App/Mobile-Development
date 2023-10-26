@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:progressMode="true"
-        app:selectedDotColor="@color/sea_green"
+        app:selectedDotColor="@color/lightSeaGreen"
         tools:ignore="MissingConstraints" />
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"

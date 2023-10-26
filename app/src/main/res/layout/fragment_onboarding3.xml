@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:textColor="@color/sea_green"
+                android:textColor="@color/lightSeaGreen"
                 android:text="@string/ob3"
                 android:textSize="26sp" />
 
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:backgroundTint="@color/sea_green"
+            android:backgroundTint="@color/lightSeaGreen"
             android:text="@string/mulai" />
     </RelativeLayout>
 
