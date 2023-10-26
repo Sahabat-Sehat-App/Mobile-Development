@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfilFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.089">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:gravity="start|center_vertical"
+            android:text="@string/setting_account"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/myprofil"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+            android:text="@string/tx_profile"
+            app:drawableEndCompat="@drawable/vektor_next"
+            app:drawableStartCompat="@drawable/vector_profil" />
+
+        <TextView
+            android:id="@+id/listfamily"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:text="@string/tx_family"
+            app:drawableEndCompat="@drawable/vektor_next"
+            app:drawableStartCompat="@drawable/vector_family" />
+
+        <TextView
+            android:id="@+id/listalamat"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:text="@string/tx_address"
+            app:drawableEndCompat="@drawable/vektor_next"
+            app:drawableStartCompat="@drawable/vector_alamat" />
+
+        <TextView
+            android:id="@+id/favoritedoctor"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:text="@string/tx_favorite"
+            app:drawableEndCompat="@drawable/vektor_next"
+            app:drawableStartCompat="@drawable/vector_favorite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/border"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.105">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:gravity="start|center_vertical"
+            android:text="@string/application"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:text="@string/tx_about"
+            app:drawableEndCompat="@drawable/vektor_next"
+            app:drawableStartCompat="@drawable/vector_about" />
+
+        <TextView
+            android:id="@+id/privacy"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:text="@string/tx_privacy"
+            app:drawableEndCompat="@drawable/vektor_next"
+            app:drawableStartCompat="@drawable/vector_privacy" />
+
+        <TextView
+            android:id="@+id/termcondition"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:text="@string/tx_term_and_codition"
+            app:drawableEndCompat="@drawable/vektor_next"
+            app:drawableStartCompat="@drawable/vector_term_condition" />
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:text="@string/tx_contact"
+            app:drawableEndCompat="@drawable/vektor_next"
+            app:drawableStartCompat="@drawable/vector_contact" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.105">
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/tx_logout"
+            app:drawableEndCompat="@drawable/vektor_next"
+            app:drawableStartCompat="@drawable/vector_logout" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
