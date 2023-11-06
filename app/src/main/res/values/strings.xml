@@ -1,14 +1,3 @@
 <resources>
     <string name="app_name">Sahabat Sehat</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="confirmation_password">Confirmation Password</string>
-    <string name="password">Password</string>
-    <string name="email">Email</string>
-    <string name="name">Name</string>
-    <string name="term_condition"><![CDATA[By signing up, you\'re agree to our Terms & Conditions and Privacy Policy]]></string>
-    <string name="resend">Resend</string>
-    <string name="didn_t_receive_the_link">Didn’t receive the link?</string>
-    <string name="verify_now">Verify Now</string>
-    <string name="we_have_sent_code_to_your_email_dokyungso_gmail_com">We have sent code to your email : dokyungso***@gmail.com</string>
-    <string name="email_verification">Email Verification</string>
 </resources>
