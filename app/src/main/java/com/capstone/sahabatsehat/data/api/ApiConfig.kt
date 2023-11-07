@@ -1,5 +1,10 @@
 package com.capstone.sahabatsehat.data.api
 
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
 class ApiConfig {
     companion object{
         const val BASE_URL = "sahabat.innoji26.xyz/"
