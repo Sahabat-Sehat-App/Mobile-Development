@@ -1,10 +1,11 @@
-package com.capstone.sahabatsehat
+package com.capstone.sahabatsehat.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
+import com.capstone.sahabatsehat.ForgotPasswordActivity
 import com.capstone.sahabatsehat.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
         setError()
 
         binding.forgot.setOnClickListener {
-            val intent= Intent(this,ForgotPasswordActivity::class.java)
+            val intent= Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
     }

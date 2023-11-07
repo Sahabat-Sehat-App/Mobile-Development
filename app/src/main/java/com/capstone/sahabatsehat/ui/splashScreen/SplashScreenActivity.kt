@@ -1,4 +1,4 @@
-package com.capstone.sahabatsehat
+package com.capstone.sahabatsehat.ui.splashScreen
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -11,6 +11,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import com.capstone.sahabatsehat.databinding.ActivitySplashScreenBinding
+import com.capstone.sahabatsehat.ui.onBoarding.OnBoardingActivity
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {

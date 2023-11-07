@@ -1,4 +1,4 @@
-package com.capstone.sahabatsehat
+package com.capstone.sahabatsehat.ui.onBoarding
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

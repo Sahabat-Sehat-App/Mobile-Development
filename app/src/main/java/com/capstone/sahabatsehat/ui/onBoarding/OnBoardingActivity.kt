@@ -1,4 +1,4 @@
-package com.capstone.sahabatsehat
+package com.capstone.sahabatsehat.ui.onBoarding
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,13 +13,13 @@ class OnBoardingActivity : AppCompatActivity() {
         binding=ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.viewpager.adapter=ViewPagerAdapter(this)
+        binding.viewpager.adapter= ViewPagerAdapter(this)
         dotIndicator()
         onBackPress()
     }
 
     private fun dotIndicator(){
-        val adapter=ViewPagerAdapter(this)
+        val adapter= ViewPagerAdapter(this)
         binding.viewpager.adapter=adapter
         binding.dotsIndicator.attachTo(binding.viewpager)
     }

@@ -1,4 +1,4 @@
-package com.capstone.sahabatsehat
+package com.capstone.sahabatsehat.ui.onBoarding
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.viewpager2.widget.ViewPager2
+import com.capstone.sahabatsehat.R
 
 
 class OnboardingFragment2 : Fragment() {
