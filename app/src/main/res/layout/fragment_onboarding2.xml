@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".OnboardingFragment2">
+    tools:context=".ui.onBoarding.OnboardingFragment2">
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

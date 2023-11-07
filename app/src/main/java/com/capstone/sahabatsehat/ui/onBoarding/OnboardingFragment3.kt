@@ -1,4 +1,4 @@
-package com.capstone.sahabatsehat
+package com.capstone.sahabatsehat.ui.onBoarding
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,7 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-
+import com.capstone.sahabatsehat.ui.login.LoginActivity
+import com.capstone.sahabatsehat.R
 
 
 class OnboardingFragment3 : Fragment() {
