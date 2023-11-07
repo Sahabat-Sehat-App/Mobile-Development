@@ -54,7 +54,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:backgroundTint="@color/lightSeaGreen"
-            android:text="@string/mulai" />
+            android:text="@string/start" />
     </RelativeLayout>
 
 
