@@ -6,6 +6,7 @@
     android:padding="10dp"
     tools:context=".ui.onBoarding.OnboardingFragment2">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -61,7 +62,5 @@
             android:text="@string/skip"
             android:textSize="15sp"/>
     </RelativeLayout>
-
-
 
 </FrameLayout>
