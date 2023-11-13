@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout android:id="@+id/linearCard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylecornerRadius_1">
+        <ImageView android:id="@+id/imageLocation"
+            android:layout_height="@dimen/_30pxh"
+            android:layout_marginBottom="@dimen/_32pxv"
+            android:layout_marginStart="@dimen/_22pxh"
+            android:layout_marginTop="@dimen/_29pxv"
+            android:layout_width="@dimen/_26pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_location_gray_801"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_location_gray_801"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnalldoctors"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginStart="@dimen/_18pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_weight="0.83" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAllDoctors"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text=""
+                style="@style/txtInterbold8" tools:text="@string/lbl_rumah"/>
+            <TextView android:id="@+id/txtAllDoctorsOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="match_parent"
+                android:text=""
+                style="@style/txtInterregular12_1" tools:text="@string/msg_kentingan_jl"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAllDoctorsTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text=""
+                style="@style/txtInterregular12_1" tools:text="@string/msg_kyungsoo_62888"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageEdit"
+            android:layout_height="@dimen/_22pxh"
+            android:layout_marginBottom="@dimen/_15pxv"
+            android:layout_marginEnd="@dimen/_11pxh"
+            android:layout_marginStart="@dimen/_18pxh"
+            android:layout_marginTop="@dimen/_55pxv"
+            android:layout_width="@dimen/_22pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_edit_teal_400"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_edit_teal_400"/>
+    </LinearLayout>
+</layout>

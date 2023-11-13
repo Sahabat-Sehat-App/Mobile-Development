@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout android:id="@+id/linearRowfotodokter"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylecornerRadius_4">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnfotodokter"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_15pxv"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_12pxv"
+            android:layout_weight="0.37" android:layout_width="0dp" android:orientation="vertical">
+            <ImageView android:id="@+id/imageFotoDokter"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_97pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="@dimen/_93pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_20pxh}"
+                imageRes="@{@drawable/img_fotodokter}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_fotodokter"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtText"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_14pxh"
+                android:layout_marginStart="@dimen/_14pxh"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text=""
+                style="@style/txtInterregular14_4" tools:text="@string/lbl_mulai_dari"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtRpCounter"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text=""
+                style="@style/txtInterregular14_5" tools:text="@string/lbl_rp_20_000"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumntextOne"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12pxv"
+            android:layout_marginEnd="@dimen/_11pxh"
+            android:layout_marginTop="@dimen/_11pxv"
+            android:layout_weight="0.63" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTextOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text=""
+                style="@style/txtInterregular18" tools:text="@string/msg_dr_yislam_al_j"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTextTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text=""
+                style="@style/txtInterregular14_4" tools:text="@string/lbl_dokter_umum"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowbag"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius_5">
+                <ImageView android:id="@+id/imageBag"
+                    android:layout_height="@dimen/_22pxh"
+                    android:layout_width="@dimen/_22pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_bag}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_bag"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTahunCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_marginStart="@dimen/_3pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text=""
+                    style="@style/txtInterregular12_4" tools:text="@string/lbl_5_tahun"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearRowbooking"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_40pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnBooking"
+                    android:layout_height="@dimen/_40pxv"
+                    android:layout_width="@dimen/_109pxh"
+                    android:paddingBottom="@dimen/_10pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_25pxh"
+                    android:paddingTop="@dimen/_10pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_booking"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRoundedOutline_2" tools:text="@string/lbl_booking"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_gray_201_border_black_900_radius_10"
+                    android:id="@+id/btnFitrashTwo"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_width="@dimen/_38pxh"
+                    android:paddingHorizontal="@dimen/_11pxh"
+                    android:paddingVertical="@dimen/_11pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_fitrash2" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -13,10 +13,28 @@
         android:theme="@style/Theme.SahabatSehat"
         tools:targetApi="31">
         <activity
+            android:name=".EditProfilSayaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DokterFavoritActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilSayaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DaftarKeluargaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddAlamatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DaftarAlamatActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name="com.capstone.sahabatsehat.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
