@@ -1,5 +1,6 @@
 package com.capstone.sahabatsehat.data.api
 
+import com.capstone.sahabatsehat.utils.BaseMessage
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -9,6 +10,7 @@ class ApiConfig {
     companion object{
         const val BASE_URL = "sahabat.innoji26.xyz/"
         const val URL_AVATAR = BASE_URL + "public/uploads/"
+
 
         fun getApiService():ApiService {
             val loggingInterceptor =

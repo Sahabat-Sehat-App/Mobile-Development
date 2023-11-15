@@ -25,8 +25,6 @@ class OnboardingFragment3 : Fragment() {
 
         startLog.setOnClickListener{
             val intent = Intent(activity, LoginActivity::class.java)
-
-            // Mulai LoginActivity
             startActivity(intent)
         }
         return view
