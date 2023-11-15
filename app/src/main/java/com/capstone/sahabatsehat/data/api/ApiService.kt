@@ -58,5 +58,9 @@ interface ApiService {
         @Part("name") name: RequestBody,
     ): Call<UpdateUserResponse>
 
-
+    companion object {
+        fun getApi(): ApiService? {
+            return ApiConfig.getApiService()
+        }
+    }
 }
