@@ -1,75 +1,71 @@
 package com.capstone.sahabatsehat.ui.login
 
-import android.annotation.SuppressLint
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+
+import android.util.Log
+import android.util.Patterns
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.capstone.sahabatsehat.data.api.ApiConfig
-import com.capstone.sahabatsehat.data.preferences.Preferences
-import com.capstone.sahabatsehat.data.preferences.UserModel
+import com.capstone.sahabatsehat.data.model.UserModel
 import com.capstone.sahabatsehat.data.response.LoginResponse
+import com.capstone.sahabatsehat.preferences.UserPreference
+import com.capstone.sahabatsehat.util.Event
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
-class LoginViewModel(application: Application): AndroidViewModel(application) {
-    val loginUser:MutableLiveData<LoginResponse> =
-        MutableLiveData<LoginResponse>()
+class LoginViewModel(private val pref: UserPreference): ViewModel() {
 
+    private val _loginData = MutableLiveData<LoginResponse>()
+    val logindata: LiveData<LoginResponse> = _loginData
 
-    lateinit var userPreferences: Preferences
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> = _isLoading
 
-    fun initialize(preferences: Preferences) {
-        userPreferences = preferences
-    }
+    private val _snackbarText = MutableLiveData<Event<String>>()
+    val snackbarText: LiveData<Event<String>> = _snackbarText
 
-    fun callloginapi(){
+    fun login(user: UserModel){
         viewModelScope.launch {
-
+            pref.login(user)
         }
     }
-//    init {
-//        login(email, password)
-//    }
-//        fun login(email:String, password:String){
-//            val client= ApiConfig.getApiService().login(email, password)
-//            client.enqueue(object :Callback<LoginResponse>{
-//                @SuppressLint("SuspiciousIndentation")
-//                override fun onResponse(
-//                    call: Call<LoginResponse>,
-//                    response: Response<LoginResponse>,
-//                ) {
-//                    if (response.isSuccessful){
-//                    val loginUser=response.body()
-//                        if (loginUser !=null){
-//                            val name = loginUser.loginResult.name
-//                            val nohp = loginUser.loginResult.nohp
-//                            val isOnline = loginUser.loginResult.isOnline
-//                            val accessToken = loginUser.loginResult.accessToken
-//                            val userId = loginUser.loginResult.userId
-//                            val email = loginUser.loginResult.email
-//                            val alamat = loginUser.loginResult.alamat
-//
-//                            _loginUser.value=loginUser!!
-//                            val user=UserModel(name,nohp, isOnline,accessToken,userId,email,alamat)
-//                            userPreferences.saveUser(user)
-//                        }
-//                    }
-//                }
-//
-//                override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-//                    TODO("Not yet implemented")
-//                }
-//
-//            })
-//        }
-    companion object{
-        private const val email = ""
-        private const val password = ""
+
+    fun loginUser(email: String, password: String){
+        _isLoading.value = true
+        val service = ApiConfig.getApiService().login(email, password)
+        service.enqueue(object : Callback<LoginResponse> {
+            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                _isLoading.value = false
+                if(response.code() == 404){
+                    _snackbarText.postValue(Event("User Not found."))
+                }else if(response.code() == 401){
+                    _snackbarText.postValue(Event("Invalid Password!"))
+                }else if(response.code() == 400){
+                    _snackbarText.postValue(Event("Password can not be empty!"))
+                }else{
+                    if(response.isSuccessful){
+                        val responseBody = response.body()
+                        if(responseBody != null){
+                            _loginData.value = response.body()
+                            _snackbarText.value = Event(response.body()?.message.toString())
+                        }else{
+                            _snackbarText.value = Event(response.body()?.message.toString())
+                        }
+                    }
+                }
+            }
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                _isLoading.value = false
+                _snackbarText.value = Event(t.message.toString())
+                Log.e("LoginViewModel", "onFailure: ${t.message.toString()}")
+            }
+
+        })
+
     }
 }
