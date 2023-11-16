@@ -15,6 +15,9 @@
         android:theme="@style/Theme.SahabatSehat"
         tools:targetApi="31">
         <activity
+            android:name=".ui.camera.CameraActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.profile.myProfile.editProfile.EditProfileActivity"
             android:exported="false" />
         <activity

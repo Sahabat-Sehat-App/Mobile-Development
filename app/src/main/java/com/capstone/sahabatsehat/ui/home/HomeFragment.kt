@@ -11,7 +11,11 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.capstone.sahabatsehat.R
 import com.capstone.sahabatsehat.databinding.FragmentHomeBinding
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
+import java.util.ArrayList
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 class HomeFragment : Fragment() {
@@ -40,5 +44,14 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun bannerCarousel() {
+        val slideImages = ArrayList<SlideModel>()
+        //Sample data
+        slideImages.add(SlideModel(R.drawable.banner1))
+        slideImages.add(SlideModel(R.drawable.banner3))
+
+        binding.imageSlider.setImageList(slideImages, ScaleTypes.FIT)
     }
 }
