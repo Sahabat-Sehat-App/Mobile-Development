@@ -51,7 +51,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private var INSTANCE: UserPreference? = null
 
         private val USERID_KEY = stringPreferencesKey("id")
-        private val NAME_KEY = stringPreferencesKey("namce")
+        private val NAME_KEY = stringPreferencesKey("name")
         private val EMAIL_KEY = stringPreferencesKey("email")
         private val NOHP_KEY = stringPreferencesKey("nohp")
         private val ACCESSTOKEN_KEY = stringPreferencesKey("accessToken")
