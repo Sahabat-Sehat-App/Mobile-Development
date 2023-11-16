@@ -35,5 +35,5 @@ data class LoginResult(
 	val email: String,
 
 	@field:SerializedName("alamat")
-	val alamat: String? = null
+	val alamat: String
 )
