@@ -1,6 +1,7 @@
 package com.capstone.sahabatsehat.ui.onBoarding
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -28,7 +29,16 @@ class OnboardingFragment3 : Fragment() {
 
             // Mulai LoginActivity
             startActivity(intent)
+            requireActivity().finish()
+            onBoardingFinished()
         }
         return view
+    }
+
+    private fun onBoardingFinished(){
+        val sharePref = requireContext().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        val editor = sharePref.edit()
+        editor.putBoolean("Finished", true)
+        editor.apply()
     }
 }

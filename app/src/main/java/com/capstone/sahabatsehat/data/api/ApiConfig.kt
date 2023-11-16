@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig {
     companion object{
-        const val BASE_URL = "sahabat.innoji26.xyz/"
+        const val BASE_URL = "https://sahabat.innoji26.xyz/"
         const val URL_AVATAR = BASE_URL + "public/uploads/"
 
         fun getApiService():ApiService {

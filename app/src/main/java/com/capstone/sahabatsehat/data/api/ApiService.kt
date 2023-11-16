@@ -3,7 +3,7 @@ package com.capstone.sahabatsehat.data.api
 import com.capstone.sahabatsehat.data.response.GetUserByIdResponse
 import com.capstone.sahabatsehat.data.response.LoginResponse
 import com.capstone.sahabatsehat.data.response.LogoutResponse
-import com.capstone.sahabatsehat.data.response.RegiterResponse
+import com.capstone.sahabatsehat.data.response.RegisterResponse
 import com.capstone.sahabatsehat.data.response.UpdateUserResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -33,7 +33,7 @@ interface ApiService {
         @Field("email") username: String,
         @Field("password") email: String,
         @Field("nohp") password: String
-    ): Call<RegiterResponse>
+    ): Call<RegisterResponse>
 
     @POST("api/user/logout/{id}")
     fun logoutUser(
