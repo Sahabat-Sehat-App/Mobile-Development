@@ -446,7 +446,6 @@
                 app:iss_auto_cycle="true"
                 app:iss_delay="0"
                 app:iss_period="4000"
-                app:iss_placeholder="@drawable/ic_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

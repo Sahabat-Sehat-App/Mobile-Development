@@ -53,13 +53,13 @@ class LoginActivity : AppCompatActivity() {
                 if(it != null){
                     viewModel.login(
                         UserModel(
-                        it.loginResult.userId,
-                        it.loginResult.name,
-                        it.loginResult.email,
-                        it.loginResult.nohp,
-                        isLogin = true,
-                        it.loginResult.accessToken,
-                            )
+                            it.loginResult.userId,
+                            it.loginResult.name,
+                            it.loginResult.email,
+                            it.loginResult.nohp,
+                            isLogin = true,
+                            it.loginResult.accessToken,
+                        )
                     )
                 }
 

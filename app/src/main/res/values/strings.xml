@@ -61,5 +61,10 @@
     <string name="sign_up">Daftar</string>
     <string name="name">Nama Lengkap</string>
     <string name="term_condition"><![CDATA[Dengan mendaftar, Anda menyetujui Syarat & Ketentuan kami dan Kebijakan Privasi]]></string>
+    <string name="identitas">Identitas Pengguna</string>
+    <string name="nik">NIK</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="no_hp">No. Hp</string>
 
 </resources>
