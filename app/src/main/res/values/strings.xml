@@ -66,5 +66,6 @@
     <string name="tanggal_lahir">Tanggal Lahir</string>
     <string name="jenis_kelamin">Jenis Kelamin</string>
     <string name="no_hp">No. Hp</string>
+    <string name="simpan">Simpan</string>
 
 </resources>
