@@ -29,11 +29,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         onBack()
-        setError()
-
-
-
         viewModelSetup()
         buttonListener()
     }
@@ -78,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.forgot.setOnClickListener {
-            val intent= Intent(this, ForgotPasswordActivity::class.java)
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
 
@@ -88,23 +85,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun setError() {
-        val emailEditText = binding.edEmail
-        val passwordEditText = binding.edPassword
-        val email=emailEditText.text.toString()
-        val password=passwordEditText.text.toString()
-
-        if (email.isEmpty()) {
-            emailEditText.error = "Email harus diisi"
-            return
-        }
-
-        if (password.isEmpty()) {
-            passwordEditText.error = "Password harus diisi"
-            return
-        }
-    }
-    private fun onBack(){
+    private fun onBack() {
         val onBackPressedCallback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 if (backPressedOnce) {
