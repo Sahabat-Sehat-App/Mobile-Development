@@ -38,6 +38,8 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
 
+        bannerCarousel()
+
         return root
     }
 

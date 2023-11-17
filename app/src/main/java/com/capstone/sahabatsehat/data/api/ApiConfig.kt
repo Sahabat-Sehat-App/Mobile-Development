@@ -1,5 +1,6 @@
 package com.capstone.sahabatsehat.data.api
 
+import com.capstone.sahabatsehat.utils.BaseMessage
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
