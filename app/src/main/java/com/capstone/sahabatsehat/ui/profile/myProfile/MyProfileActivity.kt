@@ -10,12 +10,8 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
-import com.capstone.sahabatsehat.R
-
-import com.capstone.sahabatsehat.data.response.GetUserByIdResponse
 import com.capstone.sahabatsehat.databinding.ActivityMyProfileBinding
 import com.capstone.sahabatsehat.preferences.UserPreference
-import com.capstone.sahabatsehat.ui.login.LoginViewModel
 import com.capstone.sahabatsehat.util.ViewModelFactory
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")

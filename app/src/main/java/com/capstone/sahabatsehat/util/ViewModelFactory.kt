@@ -28,7 +28,7 @@ class ViewModelFactory(private val pref: UserPreference, private val context: Co
                 SplashScreenViewModel(pref) as T
             }
             modelClass.isAssignableFrom(MyprofileViewModel::class.java) -> {
-                SplashScreenViewModel(pref) as T
+               MyprofileViewModel(pref) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
