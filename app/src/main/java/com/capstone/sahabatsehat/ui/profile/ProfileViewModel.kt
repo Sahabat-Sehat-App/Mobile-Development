@@ -1,5 +1,6 @@
 package com.capstone.sahabatsehat.ui.profile
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -18,7 +19,14 @@ import retrofit2.Response
 
 class ProfileViewModel (private val pref: UserPreference): ViewModel()  {
     // TODO: Implement the ViewModel
+    private val _logoutData = MutableLiveData<LogoutResponse>()
+    val logoutdata: LiveData<LogoutResponse> = _logoutData
 
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> = _isLoading
+
+    private val _snackbarText = MutableLiveData<Event<String>>()
+    val snackbarText: LiveData<Event<String>> = _snackbarText
     fun getUser(): LiveData<UserModel> {
         return pref.getUser().asLiveData()
     }
@@ -28,19 +36,13 @@ class ProfileViewModel (private val pref: UserPreference): ViewModel()  {
         }
     }
 
-    private val _logoutData = MutableLiveData<LogoutResponse>()
-    val logoutdata: LiveData<LogoutResponse> = _logoutData
 
-    private val _isLoading = MutableLiveData<Boolean>()
-    val isLoading: LiveData<Boolean> = _isLoading
-
-    private val _snackbarText = MutableLiveData<Event<String>>()
-    val snackbarText: LiveData<Event<String>> = _snackbarText
 
     fun logoutUserById(id: String, accessToken: String){
         _isLoading.value = true
         val service = ApiConfig.getApiService().logoutUser(id, "Bearer $accessToken")
         service.enqueue(object : Callback<LogoutResponse> {
+            @SuppressLint("SuspiciousIndentation")
             override fun onResponse(
                 call: Call<LogoutResponse>,
                 response: Response<LogoutResponse>

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.sahabatsehat.preferences.UserPreference
 import com.capstone.sahabatsehat.ui.login.LoginViewModel
 import com.capstone.sahabatsehat.ui.profile.ProfileViewModel
+import com.capstone.sahabatsehat.ui.profile.myProfile.MyprofileViewModel
 import com.capstone.sahabatsehat.ui.register.RegisterViewModel
 import com.capstone.sahabatsehat.ui.splashScreen.SplashScreenViewModel
 
@@ -24,6 +25,9 @@ class ViewModelFactory(private val pref: UserPreference, private val context: Co
                 ProfileViewModel(pref) as T
             }
             modelClass.isAssignableFrom(SplashScreenViewModel::class.java) -> {
+                SplashScreenViewModel(pref) as T
+            }
+            modelClass.isAssignableFrom(MyprofileViewModel::class.java) -> {
                 SplashScreenViewModel(pref) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

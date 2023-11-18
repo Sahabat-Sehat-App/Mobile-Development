@@ -4,9 +4,10 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.capstone.sahabatsehat.data.api.ApiConfig
-import com.capstone.sahabatsehat.data.preferences.UserModel
+
 import com.capstone.sahabatsehat.data.response.GetUserByIdResponse
 
 import com.capstone.sahabatsehat.preferences.UserPreference
@@ -28,14 +29,12 @@ class MyprofileViewModel(private val pref:UserPreference):ViewModel() {
 
 
 
-    fun getUser(){
-        viewModelScope.launch {
-            pref.getUser()
-        }
+    fun getUser(): LiveData<com.capstone.sahabatsehat.data.model.UserModel> {
+        return pref.getUser().asLiveData()
     }
     fun getUserById(id:String,accessToken:String){
         _isLoading.value=true
-        val service=ApiConfig.getApiService().getUserById(id,accessToken)
+        val service=ApiConfig.getApiService().getUserById(id,"Bearer $accessToken")
         service.enqueue(object :Callback<GetUserByIdResponse>{
             override fun onResponse(
                 call: Call<GetUserByIdResponse>,
@@ -56,7 +55,7 @@ class MyprofileViewModel(private val pref:UserPreference):ViewModel() {
             override fun onFailure(call: Call<GetUserByIdResponse>, t: Throwable) {
                 _isLoading.value = false
                 _snackbarText.value = Event(t.message.toString())
-                Log.e("LoginViewModel", "onFailure: ${t.message.toString()}")
+                Log.e("MyprofileViewModel", "onFailure: ${t.message.toString()}")
             }
 
         })
