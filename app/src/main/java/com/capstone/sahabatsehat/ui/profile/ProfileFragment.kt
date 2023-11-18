@@ -16,6 +16,7 @@ import androidx.datastore.preferences.preferencesDataStore
 import com.capstone.sahabatsehat.databinding.FragmentProfileBinding
 import com.capstone.sahabatsehat.preferences.UserPreference
 import com.capstone.sahabatsehat.ui.login.LoginActivity
+import com.capstone.sahabatsehat.ui.profile.myProfile.MyProfileActivity
 import com.capstone.sahabatsehat.util.ViewModelFactory
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
@@ -34,6 +35,10 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        binding.myprofil.setOnClickListener {
+            val intent= Intent(requireContext(), MyProfileActivity::class.java)
+            startActivity(intent)
+        }
         viewModelSetup()
         buttonListener()
 
