@@ -1,6 +1,7 @@
 package com.capstone.sahabatsehat.ui.home
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.sahabatsehat.R
 import com.capstone.sahabatsehat.databinding.FragmentHomeBinding
+import com.capstone.sahabatsehat.ui.booking.BookingActivity
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import java.util.ArrayList
@@ -37,7 +39,12 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
+        val bookingMenu = binding.cvKunjungan
+        bookingMenu.setOnClickListener {
+            // navigate to booking activity
+            val intent = Intent(activity, BookingActivity::class.java)
+            startActivity(intent)
+        }
         bannerCarousel()
 
         return root
