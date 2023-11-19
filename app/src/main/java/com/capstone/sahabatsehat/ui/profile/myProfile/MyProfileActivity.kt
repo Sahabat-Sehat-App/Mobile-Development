@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 import androidx.datastore.core.DataStore
@@ -44,10 +45,17 @@ class MyProfileActivity : AppCompatActivity() {
     private fun getUserProfile(){
    viewModel.getUser().observe(this){
        if(it !=null){
+           val whitespace = "          "
            viewModel.getUserById(it.id,it.accessToken)
-           binding.email.text= it.email
-           binding.name.text=it.name
-           binding.nohp.text=it.nohp
+           binding.email.text="Email     :${whitespace} ${it.email}"
+
+           binding.name.text = "Nama Lengkap:${whitespace}${it.name}"
+
+           binding.nohp.text="No.Hp:${whitespace}${it.nohp}"
+
+
+
+
            Log.d("MyProfileActivity", "User data received: $it")
        }
    }
