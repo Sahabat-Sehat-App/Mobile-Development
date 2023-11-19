@@ -68,5 +68,7 @@
     <string name="no_hp">No Hp</string>
     <string name="simpan">Simpan</string>
     <string name="hubungan">Hubungan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
