@@ -68,7 +68,9 @@
     <string name="no_hp">No Hp</string>
     <string name="simpan">Simpan</string>
     <string name="hubungan">Hubungan</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_pemeriksaan">Pemeriksaan Kesehatan</string>
+    <string name="search_doctor">Search Doctor</string>
+    <string name="price_doctor">Rp. %1$s</string>
+    <string name="booking">Booking</string>
 
 </resources>
