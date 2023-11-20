@@ -10,6 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/image_slider_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
@@ -296,6 +307,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/textView8"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -333,6 +345,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/textView9"
             android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -394,44 +407,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-<!--        <com.google.android.material.button.MaterialButton-->
-<!--            android:id="@+id/btn_promo"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            android:text="@string/promo"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/btn_semua"-->
-<!--            app:layout_constraintStart_toEndOf="@+id/btn_semua"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/btn_semua" />-->
-
-<!--        <com.google.android.material.button.MaterialButton-->
-<!--            android:id="@+id/btn_kerjasama"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            android:text="@string/kerjasama"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/btn_promo"-->
-<!--            app:layout_constraintStart_toEndOf="@+id/btn_promo"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/btn_promo" />-->
-
-<!--        <com.denzcoskun.imageslider.ImageSlider-->
-<!--            android:id="@+id/image_slider"-->
-<!--            android:layout_width="350dp"-->
-<!--            android:layout_height="150dp"-->
-<!--            android:layout_marginTop="24dp"-->
-<!--            app:iss_auto_cycle="true"-->
-<!--            app:iss_delay="1000"-->
-<!--            app:iss_period="1000"-->
-<!--            app:iss_text_align="CENTER"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/btn_promo" />-->
-
         <androidx.cardview.widget.CardView
             android:id="@+id/image_slider_card"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="5dp"
             app:cardUseCompatPadding="true"
@@ -442,11 +424,12 @@
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/image_slider"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 app:iss_auto_cycle="true"
                 app:iss_delay="0"
                 app:iss_period="4000"
-                app:iss_placeholder="@drawable/ic_image"
+                app:iss_error_image="@drawable/ic_image"
+                app:iss_placeholder="@drawable/banner1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -466,24 +449,14 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_pilihan"
+            android:id="@+id/btn_semua"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:text="Pilihan"
+            android:text="Semua"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_terbaru"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:text="Terbaru"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_pilihan"
-            app:layout_constraintStart_toEndOf="@+id/btn_pilihan"
-            app:layout_constraintTop_toTopOf="@+id/btn_pilihan" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_sehat"
@@ -491,18 +464,21 @@
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:text="Sehat dan Nutrisi"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_terbaru"
-            app:layout_constraintStart_toEndOf="@+id/btn_terbaru"
-            app:layout_constraintTop_toTopOf="@+id/btn_terbaru" />
+            app:layout_constraintBottom_toBottomOf="@+id/btn_semua"
+            app:layout_constraintStart_toEndOf="@+id/btn_semua"
+            app:layout_constraintTop_toTopOf="@+id/btn_semua" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_artikel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_pilihan"
+            app:layout_constraintTop_toBottomOf="@+id/btn_semua"
             tools:listitem="@layout/item_artikel" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

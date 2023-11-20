@@ -15,8 +15,10 @@ import java.io.FileOutputStream
 import java.io.InputStream
 import java.io.OutputStream
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Locale
 import java.util.TimeZone
+import java.util.concurrent.TimeUnit
 
 private const val FILENAME_FORMAT = "dd-MMM-yyyy"
 
@@ -89,8 +91,19 @@ fun formatDate(currentDateString: String, targetTimeZone: String): String {
     sourceFormat.timeZone = TimeZone.getTimeZone("UTC")
     val sourceDate = sourceFormat.parse(currentDateString)
 
-    val targetFormat = SimpleDateFormat("EEE, d MMM yyyy hh:mm a", Locale.getDefault())
-    targetFormat.timeZone = TimeZone.getTimeZone(targetTimeZone)
+    val currentTime = Calendar.getInstance().time
+    val diffMillis = currentTime.time - (sourceDate?.time ?: 0)
 
-    return sourceDate?.let { targetFormat.format(it) }.toString()
+    val minutes = diffMillis / (1000 * 60)
+    val hours = diffMillis / (1000 * 60 * 60)
+
+    return when {
+        minutes in 1..59 -> "$minutes menit yang lalu"
+        hours in 1..23 -> "$hours jam yang lalu"
+        else -> {
+            val targetFormat = SimpleDateFormat("EEE, d MMM yyyy hh:mm a", Locale.getDefault())
+            targetFormat.timeZone = TimeZone.getTimeZone(targetTimeZone)
+            sourceDate?.let { targetFormat.format(it) }.toString()
+        }
+    }
 }

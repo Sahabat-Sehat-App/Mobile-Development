@@ -30,9 +30,11 @@ class RegisterViewModel(private val pref: UserPreference): ViewModel() {
             override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
                 _isLoading.value = false
                 if(response.code() == 400){
-                    _snackbarText.postValue(Event("Failed! Username is already in use!"))
+                    _snackbarText.value = Event(response.body()?.message.toString())
+
                 }else if(response.code() == 401){
-                    _snackbarText.postValue(Event("Failed! Email is already in use!"))
+                    _snackbarText.value = Event(response.body()?.message.toString())
+
                 }else{
                     if(response.isSuccessful){
                         val responseBody = response.body()

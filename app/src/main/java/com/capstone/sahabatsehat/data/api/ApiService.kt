@@ -1,9 +1,13 @@
 package com.capstone.sahabatsehat.data.api
 
+import com.capstone.sahabatsehat.data.response.GetAllArtikelResponse
+import com.capstone.sahabatsehat.data.response.GetArtikelByIdResponse
 import com.capstone.sahabatsehat.data.response.GetUserByIdResponse
 import com.capstone.sahabatsehat.data.response.LoginResponse
 import com.capstone.sahabatsehat.data.response.LogoutResponse
+import com.capstone.sahabatsehat.data.response.RegisterPatientResponse
 import com.capstone.sahabatsehat.data.response.RegisterResponse
+import com.capstone.sahabatsehat.data.response.SearchLayananByTypeResponse
 import com.capstone.sahabatsehat.data.response.UpdateUserResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -17,6 +21,7 @@ import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Part
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface ApiService {
     @FormUrlEncoded
@@ -58,5 +63,35 @@ interface ApiService {
         @Part("name") name: RequestBody,
     ): Call<UpdateUserResponse>
 
+    @GET("api/artikel/")
+    fun getAllArtikel(
+        @Header("Authorization") accessToken: String,
+    ): Call<GetAllArtikelResponse>
 
+    @GET("api/artikel/{id}")
+    fun getArtikelById(
+        @Path("id") id: String,
+        @Header("Authorization") accessToken: String
+    ): Call<GetArtikelByIdResponse>
+
+    @GET("/artikel/search/")
+    fun searchArtikelByType(
+        @Header("Authorization") accessToken: String,
+        @Query("jenisArtikel") jenisArtikel: String
+    ): Call<GetAllArtikelResponse>
+
+    @GET("/layanan/search/")
+    fun searchLayananByType(
+        @Header("Authorization") accessToken: String,
+        @Query("jenisLayanan") jenisLayanan: String
+    ): Call<SearchLayananByTypeResponse>
+
+    @FormUrlEncoded
+    @POST("api/patient/register")
+    fun registerPatient(
+        @Field("name") name: String,
+        @Field("keluhan") username: String,
+        @Field("password") email: String,
+        @Field("nohp") password: String
+    ): Call<RegisterPatientResponse>
 }

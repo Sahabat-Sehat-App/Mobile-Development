@@ -65,28 +65,6 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-
-
-    private fun enableButton() {
-        val name = !binding.etName.text.isNullOrBlank()
-        val email = !binding.etEmail.text.isNullOrBlank()
-        val nohp = !binding.etNohp.text.isNullOrBlank()
-        val password = !binding.etPassword.text.isNullOrBlank()
-        val repeatPassword = !binding.etConfirmPassword.text.isNullOrBlank()
-
-        if(repeatPassword != password){
-            showToast("Confirmasi pasword tidak sama dengan password")
-        }
-
-        if(name && email && nohp && password && repeatPassword){
-            binding.btnSingup.isEnabled = true
-        }else{
-            binding.btnSingup.isEnabled = false
-
-        }
-
-    }
-
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
