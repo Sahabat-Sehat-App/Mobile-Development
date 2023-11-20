@@ -33,7 +33,7 @@
 
     <TextView
         android:id="@+id/name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/name"
@@ -42,15 +42,16 @@
 
     <TextView
         android:id="@+id/nik"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/nik"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
     <TextView
         android:id="@+id/tgl_lahir"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/tanggal_lahir"
@@ -58,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nik" />
     <TextView
         android:id="@+id/jenis_kelamin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/jenis_kelamin"
@@ -66,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tgl_lahir" />
     <TextView
         android:id="@+id/nohp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/no_hp"
@@ -75,7 +76,7 @@
 
     <TextView
         android:id="@+id/email"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/email"
