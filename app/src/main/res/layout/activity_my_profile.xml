@@ -16,7 +16,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon_profile"
         android:contentDescription="@string/image" />
-
     <TextView
         android:id="@+id/identifikasi_user"
         android:layout_width="match_parent"
@@ -32,23 +31,48 @@
         app:layout_constraintTop_toBottomOf="@+id/image_profile" />
 
     <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Nama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/identifikasi_user" />
+    <TextView
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/identifikasi_user" />
-
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+    <TextView
+        android:id="@+id/txt_nik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/nik"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
     <TextView
         android:id="@+id/nik"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/nik"
-
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_nik" />
+
+    <TextView
+        android:id="@+id/text_tgl_lahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/tanggal_lahir"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nik" />
     <TextView
         android:id="@+id/tgl_lahir"
         android:layout_width="match_parent"
@@ -56,7 +80,16 @@
         android:layout_marginTop="10dp"
         android:text="@string/tanggal_lahir"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nik" />
+        app:layout_constraintTop_toBottomOf="@+id/text_tgl_lahir" />
+    <TextView
+        android:id="@+id/txtjenis_kelamin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/jenis_kelamin"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tgl_lahir" />
     <TextView
         android:id="@+id/jenis_kelamin"
         android:layout_width="match_parent"
@@ -64,7 +97,17 @@
         android:layout_marginTop="10dp"
         android:text="@string/jenis_kelamin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tgl_lahir" />
+        app:layout_constraintTop_toBottomOf="@+id/txtjenis_kelamin" />
+    <TextView
+        android:id="@+id/txtnohp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/no_hp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jenis_kelamin" />
+
     <TextView
         android:id="@+id/nohp"
         android:layout_width="match_parent"
@@ -72,7 +115,16 @@
         android:layout_marginTop="10dp"
         android:text="@string/no_hp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jenis_kelamin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtnohp" />
+    <TextView
+        android:id="@+id/txtemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/email"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nohp" />
 
     <TextView
         android:id="@+id/email"
@@ -81,7 +133,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nohp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtemail" />
 
     <ProgressBar
         android:id="@+id/progressBar"
